@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For You, My Love</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Poppins:wght@300;400;500&family=Caveat:wght@500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
+  <div class="glow glow-3"></div>
+  <canvas id="hearts"></canvas>
+
+  <div id="lockScreen" class="lock-screen">
+    <div class="lock-card">
+      <div class="lock-heart">&hearts;</div>
+      <h2 class="lock-title">Welcome, my love</h2>
+      <p class="lock-text">This little world was made just for you.<br>Enter our secret password to open it.</p>
+      <form id="lockForm">
+        <input type="password" id="lockInput" placeholder="our secret word..." autocomplete="off" autofocus>
+        <button type="submit" class="love-btn lock-btn">Unlock my heart</button>
+      </form>
+      <p id="lockError" class="lock-error"></p>
+      <p class="lock-hint">hint: two words I say to you every day</p>
+    </div>
+  </div>
+
+  <nav>
+    <a href="#top" class="logo">You <span>&hearts;</span> Me</a>
+    <div class="nav-links">
+      <a href="#moments">Our Moments</a>
+      <a href="#note">Love Note</a>
+    </div>
+    <button id="musicBtn" class="music-btn" type="button" aria-pressed="false" title="Play / pause our song">
+      <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span class="play-tri" aria-hidden="true"></span>
+      <span class="note-icon" aria-hidden="true">&#9834;</span>
+      <span class="music-label">our song</span>
+    </button>
+    <div class="song-progress"><span id="songBar"></span></div>
+  </nav>
+  <audio id="loveSong" src="ssstik.io_1794794415490.mp3" loop preload="auto"></audio>
+  <div id="songHint" class="song-hint">&#9834; Put your song in this folder and name it <b>song.mp3</b> &mdash; it will play on its own.</div>
+
+  <header class="hero" id="top">
+    <p class="hero-eyebrow">for my one and only</p>
+    <h1 id="heroTitle">To My Love, My Sodo</h1>
+    <p class="hero-sub">You are My favorite person &mdash; with all my love, today and always.</p>
+    <a href="#moments" class="scroll-cue">
+      <span>our story below</span>
+      <span class="chev"></span>
+    </a>
+  </header>
+
+  <main>
+    <section id="moments">
+      <h2 class="section-title reveal">Our <em>Moments</em></h2>
+      <p class="section-sub reveal">Every picture tells a story &mdash; and ours is my favorite.</p>
+      <div class="cards">
+        <figure class="card" style="--r:-3deg; --d:0s">
+          <div class="photo">
+            <div class="placeholder"><span class="ph-heart">&hearts;</span><small>add images/photo1.jpg</small></div>
+            <img src="photo1.jpg" alt="Our moment together">
+          </div>
+        </figure>
+        <figure class="card" style="--r:2.5deg; --d:.1s">
+          <div class="photo">
+            <div class="placeholder"><span class="ph-heart">&hearts;</span><small>add images/photo2.jpg</small></div>
+            <img src="photo2.jpg" alt="Our moment together">
+          </div>
+        </figure>
+        <figure class="card" style="--r:-2deg; --d:.2s">
+          <div class="photo">
+            <div class="placeholder"><span class="ph-heart">&hearts;</span><small>add images/photo3.jpg</small></div>
+            <img src="photo3.jpg" alt="Our moment together">
+          </div>
+        </figure>
+        <figure class="card" style="--r:3deg; --d:0s">
+          <div class="photo">
+            <div class="placeholder"><span class="ph-heart">&hearts;</span><small>add images/photo4.jpg</small></div>
+            <img src="photo4.jpg" alt="Our moment together">
+          </div>
+        </figure>
+        <figure class="card" style="--r:-2.5deg; --d:.1s">
+          <div class="photo">
+            <div class="placeholder"><span class="ph-heart">&hearts;</span><small>add images/photo5.jpg</small></div>
+            <img src="photo5.jpg" alt="Our moment together">
+          </div>
+        </figure>
+        <figure class="card" style="--r:2deg; --d:.2s">
+          <div class="photo">
+            <div class="placeholder"><span class="ph-heart">&hearts;</span><small>add images/photo6.jpg</small></div>
+            <img src="photo6.jpg" alt="Our moment together">
+          </div>
+        </figure>
+        <figure class="card" style="--r:-2.5deg; --d:0s">
+          <div class="photo">
+            <div class="placeholder"><span class="ph-heart">&hearts;</span><small>add images/photo7.jpg</small></div>
+            <img src="photo7.jpg" alt="Our moment together">
+          </div>
+        </figure>
+        <figure class="card" style="--r:2.5deg; --d:.1s">
+          <div class="photo">
+            <div class="placeholder"><span class="ph-heart">&hearts;</span><small>add images/photo8.jpg</small></div>
+            <img src="photo8.jpg" alt="Our moment together">
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <section id="note">
+      <h2 class="section-title reveal">A Note <em>For You</em></h2>
+      <p class="section-sub reveal">Some words straight from the heart.</p>
+      <div class="note-wrap reveal">
+        <div class="tape tape-l"></div>
+        <div class="tape tape-r"></div>
+        <div id="loveNote" class="note-paper" contenteditable="true" spellcheck="false">My love,
+
+You’re my favorite part of every day&mdash; If I could choose again, in a thousand lifetimes, I’d still choose you.
+
+You’re the reason I believe in beautiful things, every little moment that turned into a memory I never want to forget.
+
+Thinking of you is my favorite habit.
+
+Forever yours &hearts;</div>
+      </div>
+      <p class="note-hint reveal">&#9998; click the note to write your own words &mdash; it saves automatically</p>
+    </section>
+
+    <section class="finale">
+      <div class="big-heart reveal">&hearts;</div>
+      <h2 class="reveal">I love you, today &amp; always</h2>
+      <button id="loveBtn" class="love-btn reveal">Press for a little magic</button>
+      <p id="sweetMsg" class="sweet-msg"></p>
+    </section>
+  </main>
+
+  <footer>made with <span>&hearts;</span> just for you</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
